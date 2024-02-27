@@ -1,0 +1,49 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as Item from './Item.stories.tsx';
+
+<Meta of={Item} title="Item" />
+
+# Item
+
+An item inside an inventory. Can be just an item or included in a trigger for an item modal
+
+## Example
+
+<Canvas of={Item.ItemDefault} />
+
+## Usage
+
+```ts
+import {Item} from "sld-ui";
+
+const Example = () => {
+  return (
+      <Item
+        image = '/images/ear-piercer.png',
+        rarity = 'uncommon'
+      />
+  );
+};
+
+export default Example;
+```
+
+## Arguments
+
+### Required
+
+-   **image** - String.
+-   **rarity** - String.
+
+### Optional
+
+-   **dimension** - String. Default if omitted. Needs unit.
+-   **isButton** - Boolean. Default = false.
+-   **isGeneticallyBound** - Boolean.
+-   **isSoldOut** - Boolean.
+-   **name** - String; Required only if used as an item only.
+-   **quantity** - Number. Only used for stacked items.
+-   **repairLevel** - Number. Only used for weapons and armor.
+-   **showAmount** - Boolean. Default = false.
+-   **stackSize** - Number. Used along with `showAmount`.
+-   **type** - String.
