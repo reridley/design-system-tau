@@ -36,6 +36,9 @@ const meta: Meta<typeof Item> = {
         controls: {
             exclude: ['dimension', 'quantity', 'repairLevel', 'showAmount', 'stackSize', 'isButton', 'type'],
         },
+        actions: {
+            disable: true,
+        },
     },
     decorators: withContainer,
 };
